@@ -30,26 +30,6 @@ export const routes = [
     ),
     children: [
       {
-        path: paths.default,
-        element: (
-          <MainLayout>
-            <Suspense fallback={<LoadingProgress />}>
-              <Outlet />
-            </Suspense>
-          </MainLayout>
-        ),
-        children: [
-          {
-            index: true,
-            element: <Dashboard />,
-          },
-          {
-            path: paths.transactions,
-            element: <Dashboard />,
-          },
-        ],
-      },
-      {
         path: rootPaths.authRoot,
         element: <AuthLayout />,
         children: [
@@ -72,6 +52,22 @@ export const routes = [
         ],
       },
       {
+        path: rootPaths.root,
+        element: (
+          <MainLayout>
+            <Suspense fallback={<LoadingProgress />}>
+              <Outlet />
+            </Suspense>
+          </MainLayout>
+        ),
+        children: [
+          {
+            index: true,
+            element: <Dashboard />,
+          },
+        ],
+      },
+      {
         path: rootPaths.errorRoot,
         children: [
           {
@@ -89,7 +85,7 @@ export const routes = [
 ];
 
 const router = createBrowserRouter(routes, {
-  basename: '/bankdash',
+  basename: '/task-tracker',
 });
 
 export default router;

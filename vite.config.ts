@@ -18,7 +18,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/bankdash',
+  base: '/task-tracker',
 
   //   preview: {
   //     port: 5000,

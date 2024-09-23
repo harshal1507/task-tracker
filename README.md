@@ -1,4 +1,4 @@
-## Bankdash [(Free version)](https://themewagon.github.io/bankdash/)
+## Task Tracker [(Free version)](https://themewagon.github.io/bankdash/)
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
